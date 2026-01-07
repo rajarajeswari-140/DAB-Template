@@ -1,0 +1,6 @@
+variables:
+  sql_warehouse_id:
+    description: "SQL Warehouse ID for executing alerts"
+    default: "1fc0af2854116a11" 
+  
+  

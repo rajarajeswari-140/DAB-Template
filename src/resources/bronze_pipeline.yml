@@ -1,0 +1,18 @@
+resources:
+  pipelines:
+    pipeline_bronze_pipeline:
+      name: bronze_ingestion
+      libraries:
+        - glob:
+            include: ${workspace.file_path}/src/resources/notebooks/bronze_ingestion  # <-- relative POSIX path
+      schema: bronze
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: v4c
+      serverless: true
+      # Either remove root_path or set it to a clean Workspace directory
+      # If you keep it, ensure it's a *Workspace* path, not an env var:
+      # root_path: /Workspace/Users/rajarajeswari.s.s@v4c.ai/.bundle/dev
+

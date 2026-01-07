@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "project_name": {
+      "type": "string",
+      "default": "project_name",
+      "description": "Project name",
+      "order": 1
+    }
+  }
+}

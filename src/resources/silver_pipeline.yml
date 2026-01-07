@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_silver_pipeline:
+      name: silver_pipeline
+      libraries:
+        - glob:
+            include: ${workspace.file_path}/src/resources/notebooks/silver_transformation
+      schema: silver
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: v4c
+      serverless: true
+      root_path: ${workspace.file_path}

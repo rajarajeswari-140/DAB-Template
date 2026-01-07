@@ -1,0 +1,9 @@
+targets:
+  prod:
+    mode: production
+    default: false
+    workspace:
+      host: https://dbc-26cec48e-57a3.cloud.databricks.com
+      root_path: ~/.bundle/${bundle.target}
+    variables:
+      bundle_env: prod

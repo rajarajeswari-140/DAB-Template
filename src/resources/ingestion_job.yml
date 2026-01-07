@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    etl_job:
+      name: etl_job
+      tasks:
+        - task_key: bronze_pipeline
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.pipeline_bronze_pipeline.id}
+        - task_key: silver_pipeline
+          depends_on:
+            - task_key: bronze_pipeline
+          pipeline_task:
+            pipeline_id: ${resources.pipelines.pipeline_silver_pipeline.id}
+      parameters:
+        - name: environment
+          default: dev
+      timeout_seconds: 3600
+      schedule:
+        quartz_cron_expression: "0 0 */3 * * ?"
+        timezone_id: "America/Chicago"
+        pause_status: "UNPAUSED"

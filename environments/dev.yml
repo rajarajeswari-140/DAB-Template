@@ -1,0 +1,35 @@
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-26cec48e-57a3.cloud.databricks.com
+      root_path: ~/.bundle/${bundle.target}
+    variables:
+      bundle_env: dev 
+    # permissions:
+    #   - group_name: admins
+    #     level: CAN_MANAGE
+    # run_as:
+    #   service_principal_name: '11234567-38e6-4dd8-a891-af56d1c3c91c'
+    # resources:
+    #   pipelines:
+    #     pipeline_bronze_pipeline:
+    #       permissions:
+    #         - level: CAN_MANAGE
+    #           group_name: admins
+    #         - level: CAN_MANAGE
+    #           service_principal_name: '11234567-38e6-4dd8-a891-af56d1c3c91c'
+    #     silver_dlt_pipeline:
+    #       permissions:
+    #         - level: CAN_MANAGE
+    #           group_name: data-eng
+    #         - level: CAN_MANAGE
+    #           service_principal_name: '11234567-38e6-4dd8-a891-af56d1c3c91c'
+    #   jobs:
+    #     etl_job:
+    #       permissions:
+    #         - level: CAN_MANAGE
+    #           group_name: data-eng
+    #         - level: CAN_MANAGE
+    #           service_principal_name: '11234567-38e6-4dd8-a891-af56d1c3c91c'

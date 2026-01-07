@@ -1,0 +1,25 @@
+# This is a Databricks asset bundle definition for alchemy.
+# See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
+bundle:
+  name: dab-template
+  databricks_cli_version: ">=0.279.0"
+
+variables:
+  bundle_env:
+    description: "The target environment for the bundle deployment."
+    default: dev
+  user_prefix:
+    description: "User prefix for table names (Used in local deployments only by setting the value in the _local target ymls). If set, enables local development mode by using prefixed(isolated) tables"
+    default: ""
+
+# artifacts:
+#   python_artifact:
+#     type: whl
+#     build: uv build --wheel
+
+include:
+  - src/resources/*.yml
+  - src/resources/alerts/*.yml
+  - src/*.yml
+  # Environment-specific configurations
+  - environments/*.yml
