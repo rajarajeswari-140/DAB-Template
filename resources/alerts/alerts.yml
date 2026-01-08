@@ -4,7 +4,7 @@ resources:
       display_name: "Silver layer rowcount is zero"
       query_text: |
         SELECT COUNT(*) AS cnt
-        FROM catalog.schema.silver_table
+        FROM v4c.silver.sf_fire_calls_silver
       warehouse_id: ${var.sql_warehouse_id}   # pass via target variables
       evaluation:
         comparison_operator: "EQUAL"          # cnt == 0 triggers

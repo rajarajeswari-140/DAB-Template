@@ -4,7 +4,7 @@ resources:
       name: bronze_ingestion
       libraries:
         - glob:
-            include: ${workspace.file_path}/src/resources/notebooks/bronze_ingestion  # <-- relative POSIX path
+            include: ${workspace.file_path}/src/notebooks/bronze_ingestion  # <-- relative POSIX path
       schema: bronze
       continuous: false
       development: false

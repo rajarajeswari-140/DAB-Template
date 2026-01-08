@@ -18,8 +18,8 @@ variables:
 #     build: uv build --wheel
 
 include:
-  - src/resources/*.yml
-  - src/resources/alerts/*.yml
-  - src/*.yml
+  - resources/*.yml
+  - resources/alerts/*.yml
+  - /*.yml
   # Environment-specific configurations
   - environments/*.yml

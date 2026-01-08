@@ -4,7 +4,7 @@ resources:
       name: silver_pipeline
       libraries:
         - glob:
-            include: ${workspace.file_path}/src/resources/notebooks/silver_transformation
+            include: ${workspace.file_path}/src/notebooks/silver_transformation
       schema: silver
       continuous: false
       development: false
